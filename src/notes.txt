@@ -5,6 +5,7 @@ Saga
 ------
 1) watcher
 2) worker
+3) put, takeEvery - effect creators
 
 Component - action 
 
@@ -38,3 +39,43 @@ function
 		execute func()
 				api.then(dispatch()).catch(dispatch())
 	
+addEventListener("res"func)
+removeEvent(func)
+
+
+----------------------------------------------
+
+1)const fun = useCallback(func,[])
+addEventlistener("event", fun)
+removeEventlistener(fun)
+
+2)func--> heavy computation, 
+
+parent 
+	func
+		child(heavy operations)
+
+parent render()
+	render()
+
+---------------------------------------
+Jenkins:
+    1) Manual - 
+    2) npm run dev
+
+    Project structures:
+        repo_name: 
+            source
+                src
+                packa
+                .yml
+            platform
+                .yml
+build:
+    npm install
+    sonar qube - unit test cases (80%), dependencies vulnerabilities
+    npm build
+        .build  
+            dev servers deploy
+console.log 
+    logs --> dependency - 404 , JFROG
