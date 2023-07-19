@@ -18,7 +18,6 @@ function* getUsers() {
     //dispatch an action
     yield put({ type: FETCH_USERS_FAILED, payload: error?.message });
   }
-  
 }
 
 //watcher
@@ -26,6 +25,8 @@ function* getUsers() {
 function* fetchUsers() {
   console.log("Vaseem-0");
   yield takeEvery(FETCH_USERS_WITH_SAGA, getUsers);
+  //
+  //
 }
 
 export default fetchUsers;

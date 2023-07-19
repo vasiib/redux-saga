@@ -1,0 +1,40 @@
+1)async*
+2)generator function
+
+Saga
+------
+1) watcher
+2) worker
+
+Component - action 
+
+Middleware: code/library/logic - which helps in pre-processing the actions which are dispatched from a component
+----------
+saga as middleware ->
+
+yield (effect creator) api call
+yield use response
+
+yield.next()
+
+1) store configure
+2) run the middleware
+	- watcher comes into action
+3) when required action gets fired, water calls the worker
+	- async code:
+		dispatch actions
+
+
+put - to dispatch an action to redux store
+call - to call method/saga-worker 
+cancel - to cancel an action
+
+component-dispatch---------------->reducer
+			(watcher)---> worker
+					-----> reducer
+
+function
+	return function()
+		execute func()
+				api.then(dispatch()).catch(dispatch())
+	
