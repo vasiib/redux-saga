@@ -79,3 +79,6 @@ build:
             dev servers deploy
 console.log 
     logs --> dependency - 404 , JFROG
+
+1) src - branch - commit - id1
+2) src2 - branch 2 - git cherry-pick id1
